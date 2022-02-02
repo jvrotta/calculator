@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  background-color: #0a0a0a;
+}
+
+#container {
+  width: 8.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0.5em;
+
+  /* ALTERAR O FONT SIZE COM MEDIA QUERY PRA FICAR RESPONSIVO */
+  font-size: 2.7rem;
+
+  border-radius: 0.5em;
+
+  border: 1px solid #333333fb;
+  background: linear-gradient(160deg, #343435 0%, #16181c 30%);
+  box-shadow: 0px 7px 20px 4px rgba(255, 255, 255, 0.1);
+}
+
+#display {
+  padding: 0.5em;
+  width: 100%;
+  min-height: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 0.5em;
+}
+
+#display p {
+  width: 100%;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+#display-pricipal {
+  font-size: 1.25em;
+}
+
+#display-secundary {
+  font-size: 0.75em;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+
+  background: rgb(24, 76, 104);
+  background: linear-gradient(
+    238deg,
+    rgba(24, 76, 104, 1) 0%,
+    rgba(10, 35, 58, 1) 100%
+  );
+
+  border-radius: 0.5em;
+  padding: 0 0.5em;
+}
+
+/* LEFT BUTTONS */
+#digits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+#digits > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#digits-operators {
+  display: flex;
+  flex-direction: row;
+  border-radius: 2em;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  padding: 0.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.number .button {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* buttons */
+#button-clear {
+  font-size: 0.75em;
+  padding: 1em;
+}
+
+#button-equal {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.button:hover,
+#button-equal:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 5px 1px rgba(99, 99, 99, 0.459) inset;
+}
+
+/* RIGHT BUTTONS */
+#operators {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2em;
+  gap: 0.5em;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 500px) {
+  #container {
+    /* ALTERAR O FONT SIZE COM MEDIA QUERY PRA FICAR RESPONSIVO */
+    font-size: 2rem;
+  }
+}
